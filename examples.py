@@ -153,9 +153,9 @@ def run_examples():
             words.remove('')
 
         generator.add_sentence(words)  # Add words to the generator as sentences
-        groups = group_by(words, 2)
-        for group in groups:
-            generator.add_sentence(group)  # Add word groups to the generator as sentences
+        groups_set = group_by(words, 2)
+        for groups in groups_set:
+            generator.add_sentence(groups)  # Add word groups to the generator as sentences
 
     # Generate 5 random sentences
     for i in range(5):
